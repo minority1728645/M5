@@ -1,0 +1,35 @@
+课程格式: {"id":"value","classid":"value","name":"value","teacher":"value","time":"value","type":"value","num":"value","max":"value"}
+time格式:"周,时间 周,时间..",0-4对应周一至周五,0-3对应第一节到第四节.
+type格式: 0-必修课,1-通识课,2-任选课.
+
+学生格式:
+{"id":"value","username":"value","name":"value"}
+
+1.添加课程 : POST /admin/add_course.php	classid,name,teacher,place,time,type,max
+返回:0-失败,1-成功
+
+2.添加学生 : POST /admin/add_student.php	username,password,name
+返回:0-失败,1-成功
+
+3.删除课程 : POST /admin/del_course.php	id
+返回:0-失败,1-成功
+
+4.删除学生 : POST /admin/del_student.php	id
+返回:0-失败,1-成功
+
+5.获取某学生已选课程 : POST /admin/syllabus.php	id
+返回: [课程,课程...]
+
+6.获取某课程学生名单 : POST /admin/name_list.php	id
+返回: [学生,学生...]
+
+7.获取所有课程 : POST /admin/courses.php	type:value
+type格式: 0-必修课,1-通识课,2-任选课.
+返回: [课程,课程...]
+
+8.看文件名吧: POST /admin/add_student_into_course.php	id_course,id_student
+返回:0-失败,1-成功
+
+9.看文件名吧: POST /admin/del_student_from_course.php	id_course,id_student
+返回:0-失败,1-成功
+
