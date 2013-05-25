@@ -3,6 +3,8 @@ M5
 
 A course selection system base on internet by php
 
+Screen Shot
+
 Login 
 
 ![image](https://github.com/minority1728645/M5/blob/master/screenshots/login.jpg)
